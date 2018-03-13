@@ -5,7 +5,6 @@
 #define phase_swt 6
 #define temp_sense 19
 
-void guts(char*);
 void startup();
 char* display_mash(byte);
 void display_ferm();

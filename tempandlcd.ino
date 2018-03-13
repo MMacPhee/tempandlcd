@@ -144,7 +144,7 @@ void loop() {
 
   state = next_state;
   
-  delay(500);
+  //delay(500);
 }
 
 

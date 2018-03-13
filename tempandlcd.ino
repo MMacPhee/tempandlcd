@@ -98,7 +98,7 @@ void loop() {
       break;
       
     case DISPLAY_MASH:
-      print_str = display_mash(probe_temp);
+      print_str = display_mash(probe_temp);         // theres a memory leak here
       Serial.println("display mash");
       if(buttons[1] == 1)
         next_state = EDIT_MASH;
@@ -112,14 +112,14 @@ void loop() {
       break;
       
     case EDIT_MASH:
-      edit_mash;
+      edit_mash();
       Serial.println("edit mash");
       if(buttons[1] == 0)
         next_state = DISPLAY_MASH;
       break;
       
     case EDIT_FERM:
-      edit_ferm;
+      edit_ferm();
       Serial.println("edit ferm");
       if(buttons[1] == 0)
         next_state = DISPLAY_FERM;

@@ -34,8 +34,11 @@ void startup() {
 
 char* display_mash(byte probe_temp) {
 
-  return concat_string(concat_string(print_temp(probe_temp), " / "), print_temp(mash_target));
-  
+  char* str = (char*)(malloc(16*sizeof(char)));
+  str = concat_string(print_temp(probe_temp), " / ");
+  str = concat_string(str, print_temp(mash_target));
+
+  return str;
 }
 
 void display_ferm() {

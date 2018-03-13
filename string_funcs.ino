@@ -7,7 +7,6 @@ char* concat_string ( char *a, char *b ) {
   strcpy( result, a );
   strcat( result, b );
 
-  //free(temp);
   return result;
 }
 

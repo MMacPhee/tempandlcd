@@ -1,9 +1,8 @@
 #include <String.h>
 
 char* concat_string ( char *a, char *b ) {
-  //char *result = (char*)malloc( strlen(a) + strlen(b) + 1 );
+
   char result[16];
-  //char *result;
 
   strcpy( result, a );
   strcat( result, b );

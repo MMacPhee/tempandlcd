@@ -25,11 +25,11 @@ void setup() {
   sensors.begin();
   Serial.begin(9600);
 
-  pinMode(temp_knob, INPUT);
-  pinMode(edit_btn, INPUT);
   pinMode(view_btn, INPUT);
+  pinMode(edit_btn, INPUT);
+  pinMode(up_btn, INPUT);
+  pinMode(down_btn, INPUT);
   pinMode(start_btn, INPUT);
-  pinMode(phase_swt, INPUT);
 
   print_str = print_temp(probe_temp);
 
@@ -41,7 +41,7 @@ void loop() {
   probe_temp = float_to_byte(float_temp);
   update_lcd(print_str);
 
-  buttons[0] = digitalRead(temp_knob);
+  buttons[0] = digitalRead(view_btn);
   Serial.print("Button 1 is: ");
   Serial.println(buttons[0]);
   lcd.setCursor(11, 1);
@@ -59,7 +59,7 @@ void loop() {
   else
     lcd.print(0); 
      
-  buttons[2] = digitalRead(view_btn);
+  buttons[2] = digitalRead(up_btn);
   Serial.print("Button 3 is: ");
   Serial.println(buttons[2]);
   lcd.setCursor(13, 1);
@@ -68,7 +68,7 @@ void loop() {
   else
     lcd.print(0);
     
-  buttons[3] = digitalRead(start_btn);
+  buttons[3] = digitalRead(down_btn);
   Serial.print("Button 4 is: ");
   Serial.println(buttons[3]);
   lcd.setCursor(14, 1);
@@ -77,7 +77,7 @@ void loop() {
   else
     lcd.print(0);
     
-  buttons[4] = digitalRead(phase_swt);
+  buttons[4] = digitalRead(start_btn);
   Serial.print("Button 5 is: ");
   Serial.println(buttons[4]);
   lcd.setCursor(15, 1);
@@ -91,7 +91,7 @@ void loop() {
     case STARTUP:
       startup();
       Serial.println("startup");
-      if(buttons[4] == 0)
+      if(buttons[0] == 0)
         next_state = DISPLAY_MASH;
       else
         next_state = DISPLAY_FERM;
@@ -102,6 +102,8 @@ void loop() {
       Serial.println("display mash");
       if(buttons[1] == 1)
         next_state = EDIT_MASH;
+      else if(buttons[0] == 1)
+        next_state = DISPLAY_FERM;
       break;
       
     case DISPLAY_FERM:

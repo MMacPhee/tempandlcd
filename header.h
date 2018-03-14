@@ -1,8 +1,8 @@
-#define temp_knob 2
+#define view_btn 2
 #define edit_btn 3
-#define view_btn 4
-#define start_btn 5
-#define phase_swt 6
+#define up_btn 4
+#define down_btn 5
+#define start_btn 6
 #define temp_sense 19
 
 void startup();

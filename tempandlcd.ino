@@ -2,10 +2,10 @@
 #include <DallasTemperature.h>
 #include <OneWire.h>
 #include <math.h>
-#include </Users/malcolmmacphee/Google Drive/tempandlcd/global.h>
-#include </Users/malcolmmacphee/Google Drive/tempandlcd/state_machine.h>
-#include </Users/malcolmmacphee/Google Drive/tempandlcd/buttons.h>
-#include </Users/malcolmmacphee/Google Drive/tempandlcd/lcd.h>
+#include "global.h"
+#include "state_machine.h"
+#include "buttons.h"
+#include "lcd.h"
 
 #define temp_sense 19
 

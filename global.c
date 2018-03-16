@@ -1,39 +1,39 @@
 #include "global.h"
 
 
-void write_button(char *button, short value) {
-  if (button == "view") {
+void write_button(int button, short value) {
+  if (button == 0) {
     buttons.view = value;
   }
-  else if (button == "edit") {
+  else if (button == 1) {
     buttons.edit = value;
   }
-  else if (button == "up") {
+  else if (button == 2) {
     buttons.up = value;
   }
-  else if (button == "down") {
+  else if (button == 3) {
     buttons.down = value;
   }
-  else if (button == "start") {
+  else if (button == 4) {
     buttons.start = value;
   }
   else{}
 }
 
-bool read_button(char *button) {
-  if (button == "view") {
+short read_button(int button) {
+  if (button == 0) {
     return buttons.view;
   }
-  else if (button == "edit") {
+  else if (button == 1) {
     return buttons.edit;
   }
-  else if (button == "up") {
+  else if (button == 2) {
     return buttons.up;
   }
-  else if (button == "down") {
+  else if (button == 3) {
     return buttons.down;
   }
-  else if (button == "start") {
+  else if (button == 4) {
     return buttons.start;
   }
   else
@@ -44,7 +44,7 @@ void write_probe_temp(short value) {
   probe_temp = value;
 }
 
-byte read_probe_temp() {
+short read_probe_temp() {
   return probe_temp;
 }
 

@@ -51,10 +51,10 @@ void poll_buttons() {
     else
       lcd.print(0);*/
 
-    void write_btn("view", buttons[0]);
-    void write_btn("edit", buttons[1]);
-    void write_btn("up", buttons[2]);
-    void write_btn("down", buttons[3]);
-    void write_btn("start", buttons[4]);
+    write_btn(0, buttons[0]);
+    write_btn(1, buttons[1]);
+    write_btn(2, buttons[2]);
+    write_btn(3, buttons[3]);
+    write_btn(4, buttons[4]);
 
 }

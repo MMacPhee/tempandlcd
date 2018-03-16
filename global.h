@@ -29,8 +29,8 @@ short ferm_target = 66;
 State current_state = STARTUP;
 State next_state = STARTUP;
 
-void write_button(char *button, short value);
-short read_button(char *button);
+void write_button(int button, short value);
+short read_button(int button);
 
 void write_probe_temp(short value);
 short read_probe_temp();

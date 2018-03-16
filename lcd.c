@@ -1,4 +1,4 @@
-#include <LiquidCrystal.h>
+/*#include <LiquidCrystal.h>
 #include "global.h"
 #include "lcd.h"
 
@@ -109,4 +109,4 @@ void update_lcd(State state) {
   free(bottom_line);
   
 }
-
+*/

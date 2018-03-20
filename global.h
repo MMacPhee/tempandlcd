@@ -1,10 +1,6 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 
 typedef struct Buttons{
   short view;

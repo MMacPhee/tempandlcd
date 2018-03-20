@@ -1,9 +1,6 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #define view_pin 2
 #define edit_pin 3

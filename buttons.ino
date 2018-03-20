@@ -7,13 +7,13 @@ void poll_buttons() {
   short buttons[5];
 
   buttons[0] = digitalRead(view_pin);
-    /*Serial.print("Button 1 is: ");
+    Serial.print("Button 1 is: ");
     Serial.println(buttons[0]);
     lcd.setCursor(11, 1);
     if (buttons[0] == HIGH)
       lcd.print(1);
     else
-      lcd.print(0);*/
+      lcd.print(0);
       
     buttons[1] = digitalRead(edit_pin);
     /*lcd.setCursor(12, 1);

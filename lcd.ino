@@ -1,9 +1,6 @@
-/*#include <LiquidCrystal.h>
 #include "global.h"
 #include "lcd.h"
 
-
-LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
 
 void start_lcd() {
   lcd.begin(16, 2);
@@ -109,4 +106,4 @@ void update_lcd(State state) {
   free(bottom_line);
   
 }
-*/
+

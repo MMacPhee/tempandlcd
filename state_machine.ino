@@ -18,7 +18,7 @@ void update_state_machine() {
     
     case STARTUP:
       startup();
-      //Serial.println("startup");
+      Serial.println("startup");
       if(view_btn == 0)
         next_state = DISPLAY_MASH;
       else
@@ -27,7 +27,7 @@ void update_state_machine() {
       
     case DISPLAY_MASH:
       display_mash();
-      //Serial.println("display mash");
+      Serial.println("display mash");
       if(edit_btn == 1)
         next_state = EDIT_MASH;
       else if(view_btn == 1)
@@ -36,37 +36,37 @@ void update_state_machine() {
       
     case DISPLAY_FERM:
       display_ferm();
-      //Serial.println("display ferm");
+      Serial.println("display ferm");
       if(edit_btn == 1)
         next_state = EDIT_FERM;
       break;
       
     case EDIT_MASH:
       edit_mash();
-      //Serial.println("edit mash");
+      Serial.println("edit mash");
       if(edit_btn == 0)
         next_state = DISPLAY_MASH;
       break;
       
     case EDIT_FERM:
       edit_ferm();
-      //Serial.println("edit ferm");
+      Serial.println("edit ferm");
       if(edit_btn == 0)
         next_state = DISPLAY_FERM;
       break;
       
     case PAUSE:
       pause();
-      //Serial.println("pause");
+      Serial.println("pause");
       break;
       
     case SHUTDOWN:
       shut_down();
-      //Serial.println("shutdown");
+      Serial.println("shutdown");
       break;
 
     default:
-      //Serial.println("default case");
+      Serial.println("default case");
       break;
   }
 

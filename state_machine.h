@@ -1,9 +1,6 @@
 #ifndef STATE_MACHINE_H
 #define STATE_MACHINE_H 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include "global.h"
 

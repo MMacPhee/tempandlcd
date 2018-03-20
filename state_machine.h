@@ -1,12 +1,16 @@
 #ifndef STATE_MACHINE_H
 #define STATE_MACHINE_H 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "global.h"
 
 void update_state_machine();
 
 void startup();
-void display_mash()
+void display_mash();
 void display_ferm();
 void edit_mash();
 void edit_ferm();

@@ -13,6 +13,8 @@ void update_state_machine() {
   short start_btn = read_btn("start");
 
   switch(state) {
+
+    Serial.begin(9600);
     
     case STARTUP:
       startup();
@@ -69,6 +71,8 @@ void update_state_machine() {
   }
 
   write_current_state(next_state);
+
+  Serial.end();
   
 }
 

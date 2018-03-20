@@ -4,15 +4,13 @@
 void update_state_machine() {
 
   State state = read_current_state();
-  State next_state = state;
+  State next_state = read_next_state();
   
   short view_btn = read_button("view");
   short edit_btn = read_button("edit");
   short up_btn = read_button("up");
   short down_btn = read_button("down");
   short start_btn = read_button("start");
-
-  Serial.begin(9600);
 
   switch(state) {
     
@@ -71,8 +69,6 @@ void update_state_machine() {
   }
 
   write_current_state(next_state);
-
-  Serial.end();
   
 }
 

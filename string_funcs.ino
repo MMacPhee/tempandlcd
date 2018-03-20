@@ -1,5 +1,5 @@
 #include <String.h>
-/*
+
 char* concat_string ( char *a, char *b ) {
 
   char result[16];
@@ -10,7 +10,6 @@ char* concat_string ( char *a, char *b ) {
   return result;
 }
 
-*/
 byte float_to_byte( float x ) {
 
   byte result;
@@ -27,7 +26,7 @@ byte float_to_byte( float x ) {
   return result;
   
 }
-/*
+
 char* print_temp( byte x ) {
   char *number = (char*)malloc(3*sizeof(char));
   char string[64];
@@ -49,6 +48,6 @@ char* print_temp( byte x ) {
   }
   free(number);
   return string;
-}*/
+}
 
 

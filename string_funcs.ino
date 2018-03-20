@@ -51,8 +51,3 @@ char* print_temp( byte x ) {
 }
 
 
-
-
-
-
-

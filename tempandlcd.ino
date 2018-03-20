@@ -24,11 +24,11 @@ void setup() {
   sensors.begin();
   Serial.begin(9600);
 
-  pinMode(view_btn, INPUT);
-  pinMode(edit_btn, INPUT);
-  pinMode(up_btn, INPUT);
-  pinMode(down_btn, INPUT);
-  pinMode(start_btn, INPUT);
+  pinMode(view_pin, INPUT);
+  pinMode(edit_pin, INPUT);
+  pinMode(up_pin, INPUT);
+  pinMode(down_pin, INPUT);
+  pinMode(start_pin, INPUT);
 
 }
 

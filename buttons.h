@@ -5,11 +5,11 @@
 extern "C" {
 #endif
 
-#define view_btn 2
-#define edit_btn 3
-#define up_btn 4
-#define down_btn 5
-#define start_btn 6
+#define view_pin 2
+#define edit_pin 3
+#define up_pin 4
+#define down_pin 5
+#define start_pin 6
 
 
 void poll_buttons();

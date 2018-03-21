@@ -48,6 +48,10 @@ short read_probe_temp() {
   return probe_temp;
 }
 
+short read_mash_target() {
+  return mash_target;
+}
+
 void inc_mash_target() {
   if (mash_target < 254) {
     mash_target++;
@@ -60,6 +64,10 @@ void dec_mash_target() {
     mash_target--;
   }
   else{}
+}
+
+short read_ferm_target() {
+  return ferm_target;
 }
 
 void inc_ferm_target() {

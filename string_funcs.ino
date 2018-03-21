@@ -2,7 +2,7 @@
 
 char* concat_string ( char *a, char *b ) {
 
-  char result[16];
+  char result[64];
 
   strcpy( result, a );
   strcat( result, b );

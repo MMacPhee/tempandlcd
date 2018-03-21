@@ -10,7 +10,6 @@ char* concat_string ( char *a, char *b ) {
   return result;
 }
 
-
 byte float_to_byte( float x ) {
 
   byte result;
@@ -20,8 +19,9 @@ byte float_to_byte( float x ) {
     result = -1;
   }
 
-  else
+  else {
     result = (byte)tmp;
+  }
 
   return result;
   
@@ -49,10 +49,5 @@ char* print_temp( byte x ) {
   free(number);
   return string;
 }
-
-
-
-
-
 
 

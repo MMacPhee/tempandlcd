@@ -2,14 +2,13 @@
 
 char* concat_string ( char *a, char *b ) {
 
-  char result[16];
+  char result[64];
 
   strcpy( result, a );
   strcat( result, b );
 
   return result;
 }
-
 
 byte float_to_byte( float x ) {
 
@@ -20,8 +19,9 @@ byte float_to_byte( float x ) {
     result = -1;
   }
 
-  else
+  else {
     result = (byte)tmp;
+  }
 
   return result;
   
@@ -49,10 +49,5 @@ char* print_temp( byte x ) {
   free(number);
   return string;
 }
-
-
-
-
-
 
 

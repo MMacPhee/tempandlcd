@@ -1,39 +1,39 @@
 #include "global.h"
 
 
-void write_button(char *button, short value) {
-  if (button == "view") {
+void write_button(int button, short value) {
+  if (button == 0) {
     buttons.view = value;
   }
-  else if (button == "edit") {
+  else if (button == 1) {
     buttons.edit = value;
   }
-  else if (button == "up") {
+  else if (button == 2) {
     buttons.up = value;
   }
-  else if (button == "down") {
+  else if (button == 3) {
     buttons.down = value;
   }
-  else if (button == "start") {
+  else if (button == 4) {
     buttons.start = value;
   }
   else{}
 }
 
-bool read_button(char *button) {
-  if (button == "view") {
+short read_button(int button) {
+  if (button == 0) {
     return buttons.view;
   }
-  else if (button == "edit") {
+  else if (button == 1) {
     return buttons.edit;
   }
-  else if (button == "up") {
+  else if (button == 2) {
     return buttons.up;
   }
-  else if (button == "down") {
+  else if (button == 3) {
     return buttons.down;
   }
-  else if (button == "start") {
+  else if (button == 4) {
     return buttons.start;
   }
   else
@@ -44,8 +44,12 @@ void write_probe_temp(short value) {
   probe_temp = value;
 }
 
-byte read_probe_temp() {
+short read_probe_temp() {
   return probe_temp;
+}
+
+short read_mash_target() {
+  return mash_target;
 }
 
 void inc_mash_target() {
@@ -60,6 +64,10 @@ void dec_mash_target() {
     mash_target--;
   }
   else{}
+}
+
+short read_ferm_target() {
+  return ferm_target;
 }
 
 void inc_ferm_target() {
@@ -84,11 +92,11 @@ State read_current_state() {
   return current_state;
 }
 
-void write_next_state(State state) {
-  next_state = state;
+void write_previous_state(State state) {
+  previous_state = state;
 }
 
-State read_next_state() {
-  return next_state;
+State read_previous_state() {
+  return previous_state;
 }
 

@@ -27,7 +27,7 @@ short mash_target = 154;
 short ferm_target = 66;
 
 State current_state = STARTUP;
-State next_state = STARTUP;
+State previous_state = STARTUP;
 
 void write_button(int button, short value);
 short read_button(int button);
@@ -44,4 +44,6 @@ void dec_ferm_target();
 void write_current_state(State state);
 State read_current_state();
 
+void write_previous_state(State state);
+State read_previous_state();
 #endif

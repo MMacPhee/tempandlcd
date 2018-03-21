@@ -84,11 +84,11 @@ State read_current_state() {
   return current_state;
 }
 
-void write_next_state(State state) {
-  next_state = state;
+void write_previous_state(State state) {
+  previous_state = state;
 }
 
-State read_next_state() {
-  return next_state;
+State read_previous_state() {
+  return previous_state;
 }
 

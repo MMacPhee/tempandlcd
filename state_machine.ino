@@ -130,7 +130,7 @@ void update_state_machine() {
 }
 
 void startup() {
-  delay(3000);
+  delay(1000);
 }
 
 void display_mash() {
@@ -142,10 +142,28 @@ void display_ferm() {
 }
 
 void edit_mash() {
+
+  short up_btn = read_button(2);
+  short down_btn = read_button(3);
+
+  if (up_btn == 1 && down_btn == 0)
+    inc_mash_target();
+
+  if (up_btn == 0 && down_btn == 1)
+    dec_mash_target();
   
 }
 
 void edit_ferm() {
+
+  short up_btn = read_button(2);
+  short down_btn = read_button(3);
+
+  if (up_btn == 1 && down_btn == 0)
+    inc_ferm_target();
+
+  if (up_btn == 0 && down_btn == 1)
+    dec_ferm_target();
   
 }
 

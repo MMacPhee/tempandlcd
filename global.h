@@ -35,9 +35,11 @@ short read_button(int button);
 void write_probe_temp(short value);
 short read_probe_temp();
 
+short read_mash_target();
 void inc_mash_target();
 void dec_mash_target();
 
+short read_ferm_target();
 void inc_ferm_target();
 void dec_ferm_target();
 

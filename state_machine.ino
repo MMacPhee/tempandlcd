@@ -4,7 +4,7 @@
 void update_state_machine() {
 
   State state = read_current_state();
-  State next_state = read_next_state();
+  State next_state = read_current_state();
   
   short view_btn = read_button("view");
   short edit_btn = read_button("edit");

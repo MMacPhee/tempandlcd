@@ -19,7 +19,6 @@ void update_lcd(State state) {
       lcd.clear();
       lcd.setCursor(0, 0);
       lcd.print(top_line);
-      delay(50);
       lcd.setCursor(0, 1);
       lcd.print(bottom_line);
       delay(100);

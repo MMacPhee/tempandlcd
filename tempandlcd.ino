@@ -7,9 +7,9 @@
 #include "buttons.h"
 #include "lcd.h"
 
-#define temp_sense 19
+#define temp_sense 7
 
-LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
+LiquidCrystal lcd(14, 15, 16, 17, 18, 19);
 
 float float_temp = 0;
 

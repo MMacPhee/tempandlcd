@@ -1,7 +1,7 @@
 #include "global.h"
 #include "state_machine.h"
 
-void update_state_machine() {
+void update_state_super_machine() {
 
   SuperState state = read_current_super_state();
   SuperState next_super_state = read_current_super_state();
@@ -20,9 +20,10 @@ void update_state_machine() {
     case ALARM_CHECK:
       alarm_check();
       Serial.println("alarm_check");
-      if (start_btn == 1 )
+      if (start_btn == 1 ) {
         previous_super_state = current_super_state;
         next_super_state = PAUSE;
+      }
       else
         next_super_state = ALARM_CHECK;
       break;
@@ -49,8 +50,8 @@ void update_state_machine() {
       break;
   }
 
-  write_current_super_state(next_state);
-  write_previous_super_state(previous_state);
+  write_current_super_state(next_super_state);
+  write_previous_super_state(previous_super_state);
   
 }
 

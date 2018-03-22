@@ -11,19 +11,15 @@ typedef struct Buttons{
 } Buttons;
 
 typedef enum State {
-  STARTUP,
   DISPLAY_MASH,
   DISPLAY_FERM,
   EDIT_MASH,
-  EDIT_FERM,
-  PAUSE,
-  SHUTDOWN
+  EDIT_FERM
 } State;
 
 typedef enum SuperState {
   STARTUP,
-  ALARM,
-  NOT_ALARM,
+  ALARM_CHECK,
   PAUSE,
   SHUTDOWN
 } SuperState;

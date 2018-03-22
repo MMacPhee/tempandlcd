@@ -38,7 +38,8 @@ void loop() {
   write_probe_temp(float_to_byte(float_temp));
 
   poll_buttons();
-  update_state_machine();
+  update_state_super_machine();
+  trigger_buzzer();
   update_lcd(read_current_state());
   
 }

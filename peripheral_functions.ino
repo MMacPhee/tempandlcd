@@ -7,4 +7,10 @@ float retrieve_temp() {
   return(temp);
 }
 
+void trigger_buzzer() {
+  if (buzzer_enable == 1)
+    analogWrite(9, 127);
+  else
+    analogWrite(9, 0);
+}
 

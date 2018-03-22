@@ -11,14 +11,18 @@ typedef struct Buttons{
 } Buttons;
 
 typedef enum State {
-  STARTUP,
   DISPLAY_MASH,
   DISPLAY_FERM,
   EDIT_MASH,
-  EDIT_FERM,
+  EDIT_FERM
+} State;
+
+typedef enum SuperState {
+  STARTUP,
+  ALARM_CHECK,
   PAUSE,
   SHUTDOWN
-} State;
+} SuperState;
 
 Buttons buttons = {.view = 0, .edit = 0, .up = 0, .down = 0, .start = 0};
 
@@ -26,8 +30,11 @@ short probe_temp = 0;
 short mash_target = 154;
 short ferm_target = 66;
 
-State current_state = STARTUP;
-State previous_state = STARTUP;
+short buzzer_enable = 0;
+
+State current_state = DISPLAY_MASH;
+SuperState current_super_state = STARTUP;
+SuperState previous_super_state = STARTUP;
 
 void write_button(int button, short value);
 short read_button(int button);
@@ -43,9 +50,16 @@ short read_ferm_target();
 void inc_ferm_target();
 void dec_ferm_target();
 
+void enable_buzzer();
+void disable_buzzer();
+
 void write_current_state(State state);
 State read_current_state();
 
-void write_previous_state(State state);
-State read_previous_state();
+void write_current_super_state(SuperState state);
+SuperState read_current_super_state();
+
+void write_previous_super_state(SuperState state);
+SuperState read_previous_super_state();
+
 #endif

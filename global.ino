@@ -84,6 +84,14 @@ void dec_ferm_target() {
   else{}
 }
 
+void enable_buzzer() {
+  buzzer_enable = 1;
+}
+
+void disable_buzzer() {
+  buzzer_enable = 0;
+}
+
 void write_current_state(State state) {
   current_state = state;
 }
@@ -92,11 +100,19 @@ State read_current_state() {
   return current_state;
 }
 
-void write_previous_state(State state) {
-  previous_state = state;
+void write_current_super_state(SuperState state) {
+  current_super_state = state;
 }
 
-State read_previous_state() {
-  return previous_state;
+SuperState read_current_super_state() {
+  return current_super_state;
+}
+
+void write_previous_super_state(SuperState state) {
+  previous_super_state = state;
+}
+
+SuperState read_previous_super_state() {
+  return previous_super_state;
 }
 

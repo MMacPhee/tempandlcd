@@ -17,7 +17,7 @@ void update_lcd(State state) {
 
   switch(state) {
     
-    case STARTUP:
+    /*case STARTUP:
       strcpy(top_line, "startup line 1");
       strcpy(bottom_line, "startup line 2");
       lcd.clear();
@@ -26,7 +26,7 @@ void update_lcd(State state) {
       lcd.setCursor(0, 1);
       lcd.print(bottom_line);
       delay(100);
-      break;
+      break;*/
       
     case DISPLAY_MASH:
       strcpy(top_line, "Mash Monitor:");
@@ -80,7 +80,7 @@ void update_lcd(State state) {
       delay(100);
       break;
       
-    case PAUSE:
+    /*case PAUSE:
       strcpy(top_line, "pause line 1");
       strcpy(bottom_line, "pause line 2");
       lcd.clear();
@@ -100,7 +100,7 @@ void update_lcd(State state) {
       lcd.setCursor(0, 1);
       lcd.print(bottom_line);
       delay(100);
-      break;
+      break;*/
 
     default:
       strcpy(top_line, "missed a step");

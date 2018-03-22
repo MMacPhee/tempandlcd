@@ -7,4 +7,7 @@ float retrieve_temp() {
   return(temp);
 }
 
+void trigger_buzzer() {
+  analogWrite(9, 127);
+}
 

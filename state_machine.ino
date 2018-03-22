@@ -14,17 +14,6 @@ void update_state_machine() {
   short start_btn = read_button(4);
 
   switch(state) {
-    
-    case STARTUP:
-      startup();
-      Serial.println("startup");
-      if (view_btn == 0)
-        next_state = DISPLAY_MASH;
-      else if (view_btn == 1)
-        next_state = DISPLAY_FERM;
-      else
-        Serial.println("startup directions not working");
-      break;
       
     case DISPLAY_MASH:
       display_mash();
@@ -129,10 +118,6 @@ void update_state_machine() {
   
 }
 
-void startup() {
-  delay(1000);
-}
-
 void display_mash() {
 
 }
@@ -165,14 +150,6 @@ void edit_ferm() {
   if (up_btn == 0 && down_btn == 1)
     dec_ferm_target();
   
-}
-
-void pause() {
-  // i guess do fuck all
-}
-
-void shut_down() {
-  // look at going into power saving mode and waking into startup
 }
 
 
